@@ -1,7 +1,3 @@
-	// TODO: 
-// Make the render_text class more robust and dynamic 
-// so we can use it more effectively
-
 
 class render_text
 {
