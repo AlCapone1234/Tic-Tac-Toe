@@ -22,8 +22,6 @@ public:
 		SDL_FreeSurface(surface);
 
 		imageRect = {posx, posy, iw, ih};
-
-		// SDL_RenderPresent(renderer);
 	}
 
  	void render(SDL_Renderer* renderer)
