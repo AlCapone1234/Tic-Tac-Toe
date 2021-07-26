@@ -13,8 +13,6 @@
 
 int mouseX, mouseY;
 
-// std::vector<int> spots;
-
 bool doOnce[9] = {false};
 bool X[9] = {false};
 bool O[9] = {false};
@@ -64,9 +62,6 @@ int main(int argc, char* argv[])
 	srand((unsigned) time(0));
 	int randomNumber = (rand() % 2) + 0;
 
-	// Debug
-	std::cout << randomNumber << std::endl;
-
 	SDL_Init(SDL_INIT_EVERYTHING);
 	TTF_Init();
 	IMG_Init(IMG_INIT_PNG);
@@ -83,7 +78,6 @@ int main(int argc, char* argv[])
 		SDL_Event e;
 		if (SDL_PollEvent(&e))
 		{
-			// If user clicks quit(the X on top right corner) then exit the program
 			if (e.type == SDL_QUIT)
 			{
 				break;
@@ -91,9 +85,6 @@ int main(int argc, char* argv[])
 		}
 		// Need GetMouseState in here so we can keep track of mouseX and mouseY positions
 		SDL_GetMouseState(&mouseX, &mouseY);
-
-		// Output the value of mouseX and mouseY
-		// std::cout << "X: " << mouseX << " | Y: " << mouseY << std::endl;  
 
 		// Make the background color Black 
 		SDL_SetRenderDrawColor(window.renderer, 0, 0, 0, 255);
@@ -149,7 +140,6 @@ int main(int argc, char* argv[])
 			{
 				int number = changeTurn(randomNumber, 0, window.renderer);
 				randomNumber = number;
-				// std::cout << "Number: " << number << " | " << randomNumber << std::endl;
 			}
 
 			if (mouseY <= 239 && mouseY >= 75 && mouseX >= 565 && mouseX <= 764 && !doOnce[1])
