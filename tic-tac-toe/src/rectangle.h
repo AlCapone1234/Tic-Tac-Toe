@@ -22,13 +22,6 @@ public:
 		SDL_RenderClear(renderer);
 	}
 
-	std::vector<Rectangle> addRectangle(Rectangle rectangle)
-	{
-		std::vector<Rectangle> rectangles;
-		rectangles.push_back(rectangle);
-		return rectangles;
-	}
-
 private:
 	void setColor(SDL_Renderer* renderer, int r, int g, int b, int a)
 	{
