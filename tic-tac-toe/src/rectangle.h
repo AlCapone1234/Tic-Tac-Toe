@@ -15,7 +15,6 @@ public:
 	{
 		setColor(renderer, r, g, b, a);
 		fillRect(renderer);
-		// setShow(renderer);
 	}
 
 	void clear(SDL_Renderer* renderer)
